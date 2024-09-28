@@ -22,7 +22,7 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Build with Maven
+      - name: Build with my Maven
         run: mvn -B package --file pom.xml
 
       - name: Upload WAR file

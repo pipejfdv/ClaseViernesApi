@@ -10,21 +10,24 @@ import java.net.URI;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
-
+//declarar el tipo de controlado en este caso es una APIRest
 @RestController
+//ruta primaria
 @RequestMapping("/apiCRUD/v1/toyStory")
 public class ControladorProducto {
-    @Autowired
+    @Autowired //sobreescribe el servicio para poderlo usar en el el controlador
     private ServiceProducto serviceProducto;
 
     //servicio de lista de productos
     @GetMapping("/productos")
     public List<Producto> getProductos() {
+        //llamando el servicio trae el método que retorna la lista
         return serviceProducto.getProductos();
     }
-    //traer un solo elemento
+    //traer un solo elemento de acuerdo al id de la consulta
     @GetMapping("/{id}")
     public Producto getProducto(@PathVariable UUID id) {
+        //a traves de la consulta busca el ID, si el elemento esta lo trae en caso que no una lista nula
         return serviceProducto.getProducto(id)
                 .map(producto -> producto.getId().equals(id) ? producto : null)
                 .orElse(null);

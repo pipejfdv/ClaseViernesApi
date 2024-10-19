@@ -13,7 +13,7 @@ import java.util.UUID;
 //declarar el tipo de controlado en este caso es una APIRest
 @RestController
 //ruta primaria
-@RequestMapping("/apiCRUD/v1/toyStory")
+@RequestMapping("/apiCRUD/v1/maquillaje")
 public class ControladorProducto {
     @Autowired //sobreescribe el servicio para poderlo usar en el el controlador
     private ServiceProducto serviceProducto;

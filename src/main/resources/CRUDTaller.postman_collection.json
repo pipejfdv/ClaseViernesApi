@@ -1,0 +1,301 @@
+{
+	"info": {
+		"_postman_id": "cca46fbe-d3d2-4311-9e60-8ba7f60c80fb",
+		"name": "CRUDTaller",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39069912"
+	},
+	"item": [
+		{
+			"name": "Productos",
+			"item": [
+				{
+					"name": "listaProduucto",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/apiCRUD/v1/maquillaje/productos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"apiCRUD",
+								"v1",
+								"maquillaje",
+								"productos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "unProducto",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/apiCRUD/v1/toyStory/8aa52d58-b4a7-431c-92b4-8007450cd4ef",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"apiCRUD",
+								"v1",
+								"toyStory",
+								"8aa52d58-b4a7-431c-92b4-8007450cd4ef"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "agregar producto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombreProducto\":\"prueba\",\r\n    \"categoriaProducto\":\"pruebaaa\",\r\n    \"precioProducto\":20.50,\r\n    \"cantidad\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/apiCRUD/v1/toyStory",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"apiCRUD",
+								"v1",
+								"toyStory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizarProducto",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombreProducto\":\"prueba2\",\r\n    \"categoriaProducto\":\"pruebaaa\",\r\n    \"precioProducto\":20.50,\r\n    \"cantidad\": 2000000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/apiCRUD/v1/maquillaje/8aa52d58-b4a7-431c-92b4-8007450cd4ef",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"apiCRUD",
+								"v1",
+								"maquillaje",
+								"8aa52d58-b4a7-431c-92b4-8007450cd4ef"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "métodos CRUD de productos"
+		},
+		{
+			"name": "AsesorVentas",
+			"item": [
+				{
+					"name": "crearVenta",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombreProducto\":\"Labial\",\r\n    \"cantidad\":1,\r\n    \"valor\":12.00,\r\n    \"ccCliente\":1030696278\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/asesores/RegistrarVenta",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"asesores",
+								"RegistrarVenta"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "crearCliente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ccCliente\":1030696278,\r\n    \"nombre\":\"Felipe\",\r\n    \"apellido\": \"Vanegas\",\r\n    \"telefono\":\"3015128281\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/asesores/RegistrarVenta/cliente",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"asesores",
+								"RegistrarVenta",
+								"cliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listaProductos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\":\"Jonathan\",\r\n    \"apellido\":\"Orozco\",\r\n    \"cargo\":\"asesor\",\r\n    \"salario\":1300\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/asesores/productos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"asesores",
+								"productos"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Métodos que tendra el Asesor de acuerdo a su rol"
+		},
+		{
+			"name": "Cliente",
+			"item": [
+				{
+					"name": "actualizarAsesor",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ccCliente\":1030696278,\r\n    \"nombre\":\"Juan Felipe\",\r\n    \"apellido\":\"Delgadillo Vanegas\",\r\n    \"telefono\":\"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/clientes/actualizar/1030696278",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clientes",
+								"actualizar",
+								"1030696278"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listaCompras",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/clientes/compras/1030696278",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clientes",
+								"compras",
+								"1030696278"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Datos de cliente"
+		},
+		{
+			"name": "Administrador",
+			"item": [
+				{
+					"name": "listaClientes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/admin/listaClientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"admin",
+								"listaClientes"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "metodos que puede usar el administrador - RECOMENDABLE APLICAR HERENCIA"
+		}
+	]
+}

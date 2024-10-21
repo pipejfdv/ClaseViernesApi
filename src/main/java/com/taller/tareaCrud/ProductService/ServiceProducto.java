@@ -16,15 +16,15 @@ public class ServiceProducto {
     //agregar contenido a la lista
     public ServiceProducto() {
         productos = new ArrayList<>();
-        productos.add(new Producto(UUID.randomUUID(), "Buzz Lightyear", "Espacio", 26.80, 3));
-        productos.add(new Producto(UUID.randomUUID(), "Woody", "Vaquero", 24.50, 5));
-        productos.add(new Producto(UUID.randomUUID(), "Jessie", "Vaquera", 22.30, 4));
-        productos.add(new Producto(UUID.randomUUID(), "Rex", "Dinosaurio", 18.75, 2));
-        productos.add(new Producto(UUID.randomUUID(), "Hamm", "Cerdito", 15.60, 3));
-        productos.add(new Producto(UUID.randomUUID(), "Mr. Potato Head", "Papa", 20.00, 4));
-        productos.add(new Producto(UUID.randomUUID(), "Slinky Dog", "Perro", 19.90, 3));
-        productos.add(new Producto(UUID.randomUUID(), "Bo Peep", "Pastora", 21.40, 4));
-        productos.add(new Producto(UUID.randomUUID(), "Forky", "Tenedor", 12.00, 1));
+        productos.add(new Producto(UUID.randomUUID(), "Base Líquida", "Maquillaje", 26.80, 3));
+        productos.add(new Producto(UUID.randomUUID(), "Corrector", "Maquillaje", 24.50, 5));
+        productos.add(new Producto(UUID.randomUUID(), "Polvo Compacto", "Maquillaje", 22.30, 4));
+        productos.add(new Producto(UUID.randomUUID(), "Rubor", "Maquillaje", 18.75, 2));
+        productos.add(new Producto(UUID.randomUUID(), "Iluminador", "Maquillaje", 15.60, 3));
+        productos.add(new Producto(UUID.randomUUID(), "Sombra de Ojos", "Maquillaje", 20.00, 4));
+        productos.add(new Producto(UUID.randomUUID(), "Delineador", "Maquillaje", 19.90, 3));
+        productos.add(new Producto(UUID.randomUUID(), "Máscara de Pestañas", "Maquillaje", 21.40, 4));
+        productos.add(new Producto(UUID.randomUUID(), "Labial", "Maquillaje", 12.00, 1));
 
     }
 

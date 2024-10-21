@@ -8,13 +8,13 @@ import lombok.Setter;
 import java.util.UUID;
 
 @Data
+@AllArgsConstructor
 @Getter
 @Setter
-@AllArgsConstructor
-public class Clientes {
-    private UUID idCliente;
+public class Ventas {
+    private UUID id;
+    private String nombreProducto;
+    private int cantidad;
+    private float valor;
     private int ccCliente;
-    private String nombre;
-    private String apellido;
-    private String telefono;
 }

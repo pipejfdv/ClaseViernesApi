@@ -15,6 +15,6 @@ public class Administrador {
     private UUID idAdministrador;
     private String nombre;
     private String apellido;
-    private String rol;
+    private String cargo;
     private float salario;
 }
